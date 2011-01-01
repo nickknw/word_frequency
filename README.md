@@ -1,5 +1,5 @@
 Word Frequency list
---------------------
+====================
 
 **What use is it?**
 
@@ -13,7 +13,7 @@ TODO!
 
 
 String Frequency list
-----------------------
+======================
 
 This is actually just a slight variation of the previous tool. It only searches inside of string literals in the source code. It is good for finding out there are 89 occurrences of "SELECT * FROM" among other things.
 
