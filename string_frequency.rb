@@ -70,9 +70,9 @@ def createWordFrequencyList(filename)
 end
 
 
-Dir.mkdir :wordfreq unless Dir.exists? :wordfreq
+Dir.mkdir "wordfreq" unless Dir.exists? "wordfreq"
 currentDirectoryName = File.basename(Dir.pwd)
-reportFileName = "wordfreq/#{currentDirectoryName}-stringsonly-#{$wordsInPhrase}words#{$ext}.wordfreq"
+reportFileName = "wordfreq/#{currentDirectoryName}-stringsonly-#{"%02d" % $wordsInPhrase}words#{$ext}.wordfreq"
 
 puts "Processing #{Dir.pwd}..."
 masterWordlist = Hash.new

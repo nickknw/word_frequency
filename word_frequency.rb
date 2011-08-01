@@ -1,8 +1,13 @@
-#Usage: place in desired folder then run like so:
+# Usage: place in desired folder then run like so:
 #	    ruby word_frequency.rb [number of contiguous words] [desired file extension]
 #	    ruby word_frequency.rb 1 vb	    #list of most frequent single words in all *.vb files in current directory and subdirectories
 #	    ruby word_frequency.rb	    #same as above, the defaults are '1' and 'vb'
 #	    ruby word_frequency.rb 5 cs	    #list of the most frequent 5-word phrases in all *.cs files in current directory and subdirectories
+# Depending on the encoding of the files you want to analyze, you might have to
+# set the external encoding when you run this script, like so:
+#           ruby -E 'iso-8859-1' word_frequency.rb 3
+# I'm positive there's a better way for my scripts to handle this, but I don't
+# know what it is yet.
 
 $files_processed = 0
 $ext = ".vb"
@@ -64,7 +69,7 @@ end
 
 Dir.mkdir "wordfreq" unless Dir.exists? "wordfreq"
 currentDirectoryName = File.basename(Dir.pwd)
-reportFileName = "wordfreq/#{currentDirectoryName}-#{$wordsInPhrase}words#{$ext}.wordfreq"
+reportFileName = "wordfreq/#{currentDirectoryName}-#{"%02d" % $wordsInPhrase}words#{$ext}.wordfreq"
 
 puts "Processing #{Dir.pwd}..."
 masterWordlist = Hash.new
