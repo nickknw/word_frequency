@@ -62,7 +62,7 @@ def createWordFrequencyList(filename)
 end
 
 
-Dir.mkdir :wordfreq unless Dir.exists? :wordfreq
+Dir.mkdir "wordfreq" unless Dir.exists? "wordfreq"
 currentDirectoryName = File.basename(Dir.pwd)
 reportFileName = "wordfreq/#{currentDirectoryName}-#{$wordsInPhrase}words#{$ext}.wordfreq"
 
