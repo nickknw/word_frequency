@@ -1,11 +1,6 @@
 Word Frequency
 ===
 
-[Word Frequency](http://nickknowlson.com/projects/word_frequency/) project home page. Contains all of the following information + an in-depth example.
-
-Details
----
-
 My word\_frequency script counts the number of times a each word (or phrase)
 occurs in a programming project and produces a sorted list of which ones appear
 most frequently. It helps identify simple trends and recurring patterns and is
