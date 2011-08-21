@@ -18,13 +18,11 @@ At low word counts, it mostly reflects the keywords of the language, as you woul
 Usage
 ---
 
-{% highlight bash %}
-cd my_csharp_project
-ruby word_frequency.rb 1 cs
+    cd my_csharp_project
+    ruby word_frequency.rb 1 cs
 
-cd ../my_website
-ruby word_frequency.rb 5 js
-{% endhighlight %}
+    cd ../my_website
+    ruby word_frequency.rb 5 js
 
 String Frequency 
 ---
